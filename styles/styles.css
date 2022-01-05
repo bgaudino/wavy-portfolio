@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  font-family: "Mukta", sans-serif;
+  color: #fff;
+  background: #27251F;
+}
+
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20vw;
+}
+
+.orange {
+  background-color: #FD5A1E;
+}
+
+.divider {
+  background: url("../images/layers1.svg") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.flip {
+  transform: rotateX(180deg);
+}
