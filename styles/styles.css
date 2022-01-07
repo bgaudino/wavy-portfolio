@@ -1,8 +1,22 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: "Mukta", sans-serif;
   color: #fff;
-  background: #27251F;
+  background: #27251f;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
 }
 
 section {
@@ -11,15 +25,168 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 20vw;
+  padding: 0 20px;
+  min-height: 300px;
+}
+
+img {
+  height: 150px;
+  width: auto;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background: transparent;
+  transition: 500ms;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  transition: 300ms;
+}
+
+hr {
+  width: 0;
+  border: 0;
+  height: 2px;
+  margin-bottom: 20px;
+  background: #fff;
+  transition: 1s;
+}
+
+.is-circle {
+  border-radius: 50%;
+}
+
+.fixed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.project-links a {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.project-links a:hover {
+  background: #fff;
+  color: #27251f;
+}
+
+.code-wrapper {
+  display: inline-block;
+  transition: 300ms;
+  transition: color 0;
+}
+
+.code-wrapper:hover {
+  -webkit-transform: scale(1.1); /* Chrome, Safari, Opera */
+  transform: scale(1.1);
+}
+
+.code-wrapper::before,
+.project h2::before {
+  content: "< ";
+  opacity: 0;
+  transition: color 0, opacity 300ms;
+}
+
+.code-wrapper::after,
+.project h2::after {
+  content: " />";
+  opacity: 0;
+  transition: color 0, opacity 300ms;
+}
+
+.code-wrapper:hover::before,
+.active-project h2::before {
+  opacity: 1;
+}
+
+.code-wrapper:hover::after,
+.active-project h2::after {
+  opacity: 1;
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -75px;
+  height: 0;
+  visibility: hidden;
+}
+
+.nav,
+.nav a,
+.project-links a {
+  text-transform: uppercase;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 calc(100vw - 1260px);
+  transition: background 300ms;
+  animation: drop-in 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes drop-in {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fly-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.container-sm {
+  width: 100%;
+  max-width: 600px;
+}
+
+.nav-border {
+  grid-column: span 2;
+  height: 0px;
+  background: transparent;
+  transition: 500ms;
+}
+
+.nav-border-scroll {
+  height: 2px;
+  width: 100%;
+  background: #fff;
+}
+
+.header-scroll {
+  background-color: #27251f;
 }
 
 .orange {
-  background-color: #FD5A1E;
+  background-color: #fd5a1e;
 }
 
 .divider {
-  background: url("../images/layers1.svg") no-repeat center;
+  background: url("../images/wave1.svg") no-repeat center;
   background-size: cover;
   width: 100%;
   height: 300px;
@@ -27,4 +194,87 @@ section {
 
 .flip {
   transform: rotateX(180deg);
+}
+
+.landing {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.project-links {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  vertical-align: text-top;
+}
+
+.project-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1080px;
+  margin: auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+.project {
+  background: url("../images/wave1.svg") no-repeat cover !important;
+  padding: 20px;
+  border-radius: 10px;
+  background: #ae8f6f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 500ms;
+}
+
+.active-project {
+  background-color: #fd5a1e;
+}
+
+.active-project hr {
+  width: 100%;
+}
+
+@media screen and (max-width: 1080px) {
+  .logo {
+    text-align: center;
+  }
+  .nav {
+    grid-template-columns: 1fr;
+  }
+  .nav-border {
+    grid-column: span 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project-section {
+    grid-template-columns: 1fr;
+  }
+  .anchor {
+    top: -101px;
+  }
+  .landing {
+    align-items: center;
+  }
+  .nav-links {
+    display: none;
+  }
 }

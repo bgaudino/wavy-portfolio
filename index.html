@@ -10,10 +10,113 @@
       href="https://fonts.googleapis.com/css2?family=Mukta&display=swap"
       rel="stylesheet"
     />
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
     <link href="./styles/styles.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/2.0.0/kute.min.js"></script>
     <title>Brian Gaudino</title>
   </head>
   <body>
+    <header id="header">
+      <nav class="nav">
+        <div class="logo">Brian Gaudino</div>
+        <ul class="nav-links">
+          <li>
+            <a class="code-wrapper" href="#" id="header-link">Home</a>
+          </li>
+          <li>
+            <a class="code-wrapper" href="#about">About</a>
+          </li>
+          <li>
+            <a class="code-wrapper" href="#projects">Projects</a>
+          </li>
+          <li>
+            <a class="code-wrapper" href="#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="nav-border"></div>
+      </nav>
+    </header>
+
+    <div class="divider flip fixed"></div>
+
+    <section class="landing">
+      <img class="is-circle" src="images/me.jpg" alt="me" />
+      <h1>Hi, I'm <span id="name">Brian</span></h1>
+      <h2>I'm a <span>Full Stack Web Developer</span></h2>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="orange">
+      <a class="anchor" id="about"></a>
+      <div class="container-sm">
+        <h1>About Me</h1>
+        <p>
+          I'm a Full Stack Web Developer based in Chicago. As a self-taught
+          programmer with a background in music, I bring a muli-disciplinary
+          mindset to my work. I specialize in Django and React but I'm I am
+          always excited to learn new technologies. I'm currently working as a
+          Web Developer at
+          <a href="https://www.thepaperlessagent.com/">The Paperless Agent</a>. And if you are wondering about the color scheme of this site, I'm a huge San Francisco Giants fan.
+        </p>
+      </div>
+    </section>
+
+    <div class="divider flip"></div>
+
+    <section id="project-section">
+      <a class="anchor" id="projects"></a>
+      <h1>Projects</h1>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="orange">
+      <a class="anchor" id="contact"></a>
+      <div class="container-sm">
+        <h1>Let's Talk</h1>
+        <p>
+          I'm currently looking for new opportunities. If you're interested in
+          working together, please reach out to me at
+          <a href="mailto:bgaudino@gmail.com">bgaudino@gmail.com</a>
+        </p>
+      </div>
+    </section>
+
+    <div class="divider flip"></div>
+
+    <div>
+      <h2 style="transform: translateY(100%); text-align: center;">
+        Thanks for visiting. And don't let the blob get you!
+      </h2>
+
+      <svg
+        id="visual"
+        style="width: 100%; height: 100%"
+        viewBox="0 0 900 300"
+        width="900"
+        height="300"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+      >
+        <path
+          id="wave1"
+          d="M0 174L6.5 169.7C13 165.3 26 156.7 39 156C52 155.3 65 162.7 78 164.2C91 165.7 104 161.3 117.2 154.2C130.3 147 143.7 137 156.8 135.3C170 133.7 183 140.3 196 143.5C209 146.7 222 146.3 235 155C248 163.7 261 181.3 274 188.2C287 195 300 191 313 173.7C326 156.3 339 125.7 352 116.2C365 106.7 378 118.3 391 134.2C404 150 417 170 430.2 178.7C443.3 187.3 456.7 184.7 469.8 185.3C483 186 496 190 509 192.5C522 195 535 196 548 187.5C561 179 574 161 587 148.3C600 135.7 613 128.3 626 138.2C639 148 652 175 665 183.2C678 191.3 691 180.7 704 167.3C717 154 730 138 743.2 142C756.3 146 769.7 170 782.8 167.7C796 165.3 809 136.7 822 139.2C835 141.7 848 175.3 861 180.5C874 185.7 887 162.3 893.5 150.7L900 139L900 301L893.5 301C887 301 874 301 861 301C848 301 835 301 822 301C809 301 796 301 782.8 301C769.7 301 756.3 301 743.2 301C730 301 717 301 704 301C691 301 678 301 665 301C652 301 639 301 626 301C613 301 600 301 587 301C574 301 561 301 548 301C535 301 522 301 509 301C496 301 483 301 469.8 301C456.7 301 443.3 301 430.2 301C417 301 404 301 391 301C378 301 365 301 352 301C339 301 326 301 313 301C300 301 287 301 274 301C261 301 248 301 235 301C222 301 209 301 196 301C183 301 170 301 156.8 301C143.7 301 130.3 301 117.2 301C104 301 91 301 78 301C65 301 52 301 39 301C26 301 13 301 6.5 301L0 301Z"
+          fill="#FD5A1E"
+          stroke-linecap="round"
+          stroke-linejoin="miter"
+        ></path>
+        <path
+          id="wave2"
+          visibility="hidden"
+          d="M0 145L6.5 147.5C13 150 26 155 39 158.2C52 161.3 65 162.7 78 159.3C91 156 104 148 117.2 152.2C130.3 156.3 143.7 172.7 156.8 169C170 165.3 183 141.7 196 134C209 126.3 222 134.7 235 149.3C248 164 261 185 274 184.7C287 184.3 300 162.7 313 161.2C326 159.7 339 178.3 352 170.2C365 162 378 127 391 127.7C404 128.3 417 164.7 430.2 171C443.3 177.3 456.7 153.7 469.8 152C483 150.3 496 170.7 509 167.8C522 165 535 139 548 140.7C561 142.3 574 171.7 587 171.5C600 171.3 613 141.7 626 142.5C639 143.3 652 174.7 665 175.3C678 176 691 146 704 132.2C717 118.3 730 120.7 743.2 130.7C756.3 140.7 769.7 158.3 782.8 168.7C796 179 809 182 822 169C835 156 848 127 861 119.5C874 112 887 126 893.5 133L900 140L900 301L893.5 301C887 301 874 301 861 301C848 301 835 301 822 301C809 301 796 301 782.8 301C769.7 301 756.3 301 743.2 301C730 301 717 301 704 301C691 301 678 301 665 301C652 301 639 301 626 301C613 301 600 301 587 301C574 301 561 301 548 301C535 301 522 301 509 301C496 301 483 301 469.8 301C456.7 301 443.3 301 430.2 301C417 301 404 301 391 301C378 301 365 301 352 301C339 301 326 301 313 301C300 301 287 301 274 301C261 301 248 301 235 301C222 301 209 301 196 301C183 301 170 301 156.8 301C143.7 301 130.3 301 117.2 301C104 301 91 301 78 301C65 301 52 301 39 301C26 301 13 301 6.5 301L0 301Z"
+          fill="#FD5A1E"
+          stroke-linecap="round"
+          stroke-linejoin="miter"
+        ></path>
+      </svg>
+    </div>
     <script src="./scripts/projects.js"></script>
     <script src="./scripts/main.js"></script>
   </body>
