@@ -1,9 +1,16 @@
+:root {
+  --black: #27251f;
+  --orange: #fd5a1e;
+  --gold: #ae8f6f;
+  --beige: #efd19f;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: "Mukta", sans-serif;
   color: #fff;
-  background: #27251f;
+  background: var(--black);
 }
 
 h1 {
@@ -78,7 +85,7 @@ hr {
 
 .project-links a:hover {
   background: #fff;
-  color: #27251f;
+  color: var(--black);
 }
 
 .code-wrapper {
@@ -135,8 +142,9 @@ hr {
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   align-items: baseline;
-  padding: 0 calc(100vw - 1260px);
+  padding: 0 20px;
   transition: background 300ms;
+  transition: height 1s;
   animation: drop-in 1s ease-in-out;
   animation-fill-mode: forwards;
 }
@@ -178,11 +186,11 @@ hr {
 }
 
 .header-scroll {
-  background-color: #27251f;
+  background-color: var(--black);
 }
 
 .orange {
-  background-color: #fd5a1e;
+  background-color: var(--orange);
 }
 
 .divider {
@@ -236,7 +244,7 @@ hr {
   background: url("../images/wave1.svg") no-repeat cover !important;
   padding: 20px;
   border-radius: 10px;
-  background: #ae8f6f;
+  background: var(--gold);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -245,11 +253,67 @@ hr {
 }
 
 .active-project {
-  background-color: #fd5a1e;
+  background-color: var(--orange);
 }
 
 .active-project hr {
   width: 100%;
+}
+
+.fas {
+  display: none !important;
+  cursor: pointer;
+}
+
+.mobile-links {
+  background-color: var(--beige);
+  padding-right: 1rem;
+  border-radius: 10px;
+  position: fixed;
+  opacity: 0;
+  text-align: right;
+  transition: 1s;
+  list-style: none;
+  top: 32px;
+  left: calc(100% - 8rem);
+}
+
+.mobile-links a {
+  color: var(--black);
+}
+
+.tag {
+  height: 2rem;
+  width: auto;
+  color: #fff;
+}
+
+.project a i {
+  margin: 0 0.5rem;
+}
+
+.django {
+  height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.tags {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.django {
+  src: url("https://img.icons8.com/material-outlined/24/000000/django.png");
+}
+
+#name {
+  font-family: "Luckiest Guy", display;
+  font-size: 3rem;
+  letter-spacing: 3px;
+  color: var(--orange);
 }
 
 @media screen and (max-width: 1080px) {
@@ -257,14 +321,26 @@ hr {
     text-align: center;
   }
   .nav {
-    grid-template-columns: 1fr;
+    justify-content: flex-end;
   }
   .nav-border {
     grid-column: span 1;
   }
 }
 
+@media screen and (max-width: 1280px) {
+  .logo {
+    padding: 0 20px;
+  }
+}
+
 @media screen and (max-width: 768px) {
+  .fas {
+    display: inline-block !important;
+  }
+  .menu-open {
+    opacity: 1;
+  }
   .project-section {
     grid-template-columns: 1fr;
   }
@@ -276,5 +352,13 @@ hr {
   }
   .nav-links {
     display: none;
+  }
+  .logo {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav {
+    grid-template-columns: 1fr;
   }
 }

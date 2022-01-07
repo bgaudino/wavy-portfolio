@@ -7,18 +7,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Mukta&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Mukta&display=swap"
       rel="stylesheet"
     />
     <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
     <link href="./styles/styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/2.0.0/kute.min.js"></script>
     <title>Brian Gaudino</title>
   </head>
   <body>
     <header id="header">
       <nav class="nav">
-        <div class="logo">Brian Gaudino</div>
+        <div class="logo">
+          Brian Gaudino
+          <div><i class="fas fa-hamburger"></i></div>
+        </div>
         <ul class="nav-links">
           <li>
             <a class="code-wrapper" href="#" id="header-link">Home</a>
@@ -33,6 +42,20 @@
             <a class="code-wrapper" href="#contact">Contact</a>
           </li>
         </ul>
+        <ul class="mobile-links">
+          <li>
+            <a href="#" id="header-link">Home</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
         <div class="nav-border"></div>
       </nav>
     </header>
@@ -41,7 +64,7 @@
 
     <section class="landing">
       <img class="is-circle" src="images/me.jpg" alt="me" />
-      <h1>Hi, I'm <span id="name">Brian</span></h1>
+      <h1>Hi, I'm <span id="name">Brian!</span></h1>
       <h2>I'm a <span>Full Stack Web Developer</span></h2>
     </section>
 
@@ -57,7 +80,9 @@
           mindset to my work. I specialize in Django and React but I'm I am
           always excited to learn new technologies. I'm currently working as a
           Web Developer at
-          <a href="https://www.thepaperlessagent.com/">The Paperless Agent</a>. And if you are wondering about the color scheme of this site, I'm a huge San Francisco Giants fan.
+          <a href="https://www.thepaperlessagent.com/">The Paperless Agent</a>.
+          And if you are wondering about the color scheme of this site, I'm a
+          huge San Francisco Giants fan.
         </p>
       </div>
     </section>
@@ -85,8 +110,8 @@
 
     <div class="divider flip"></div>
 
-    <div>
-      <h2 style="transform: translateY(100%); text-align: center;">
+    <!-- <div>
+      <h2 style="transform: translateY(100%); text-align: center">
         Thanks for visiting. And don't let the blob get you!
       </h2>
 
@@ -116,7 +141,7 @@
           stroke-linejoin="miter"
         ></path>
       </svg>
-    </div>
+    </div> -->
     <script src="./scripts/projects.js"></script>
     <script src="./scripts/main.js"></script>
   </body>
