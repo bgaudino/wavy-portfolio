@@ -12,6 +12,7 @@ body {
   font-family: "Mukta", sans-serif;
   color: #fff;
   background: var(--black);
+  overflow-x: hidden;
 }
 
 h1 {
