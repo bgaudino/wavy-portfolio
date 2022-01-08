@@ -14,6 +14,7 @@ projects.forEach((project, index) => {
   img.classList.add("project-img");
   const imgLink = document.createElement("a");
   imgLink.href = project.link;
+  imgLink.target = "_blank";
   imgLink.appendChild(img);
   const links = document.createElement("div");
   links.classList.add("project-links");
@@ -32,11 +33,11 @@ projects.forEach((project, index) => {
     if (tag === "Django") {
       tagDiv = document.createElement("img");
       tagDiv.classList.add("django");
-      tagDiv.src = "./images/django.png";
+      tagDiv.src = "./images/icons/django.png";
     } else if (tag === "Svelte") {
       tagDiv = document.createElement("img");
       tagDiv.classList.add("django");
-      tagDiv.src = "./images/svelte.png";
+      tagDiv.src = "./images/icons/svelte.png";
     } else if (["React", "js", "Python", "html5", "css3", "Bootstrap"].includes(tag)) {
       tagDiv = document.createElement("i");
       tagDiv.classList.add("tag");
@@ -95,28 +96,6 @@ anchors.forEach((anchor) => {
   });
 });
 
-// Handle svg animation
-const waves = KUTE.fromTo(
-  "#wave1",
-  { path: "#wave1" },
-  { path: "#wave2" },
-  { repeat: 999, duration: 5000, yoyo: true }
-);
-waves.start();
-
-// Handle link hover color
-const navLinks = document.querySelectorAll(".code-wrapper");
-
-navLinks.forEach((link) => {
-  link.addEventListener("mouseenter", () => {
-    if (link.tagName === "H2") {
-      link.style.color = "orange";
-    } else {
-      link.style.color = window.scrollY > 0 ? "orange" : "#EFD19F";
-    }
-  });
-  link.addEventListener("mouseleave", () => (link.style.color = "white"));
-});
 
 // Handle card hover animation
 const cards = Array.from(document.querySelectorAll(".project"));
@@ -130,53 +109,4 @@ cards.forEach((card) => {
   };
 });
 
-// Handle mobile navbar
-const burger = document.querySelector(".fa-hamburger");
-const menu = document.querySelector(".mobile-links");
 
-let menuOpen = false;
-burger.onclick = () => {
-  if (menuOpen) {
-    menu.classList.remove("menu-open");
-    // nav.style.height = `${nav.clientHeight - 140}px`;
-    menuOpen = false;
-  } else {
-    menu.classList.add("menu-open");
-    // nav.style.height = `${nav.clientHeight + 140}px`;
-    menuOpen = true;
-  }
-};
-
-let timer = -1;
-let linkClicked = false;
-
-document.addEventListener("scroll", () => {
-  if (linkClicked) return;
-  nav.style.animationName = "fly-up";
-  if (timer !== -1) {
-    clearTimeout(timer);
-  }
-  timer = setTimeout(() => {
-    if (menuOpen) {
-      menuOpen = false;
-      menu.classList.remove("menu-open");
-      nav.style.height = `${nav.clientHeight - 140}px`;
-    }
-    if (window.scrollY > 0) {
-      nav.classList.add("header-scroll");
-      border.classList.add("nav-border-scroll");
-    } else {
-      nav.classList.remove("header-scroll");
-      border.classList.remove("nav-border-scroll");
-    }
-    nav.style.animationName = "drop-in";
-  }, 500);
-  const scroll = window.scrollY;
-});
-
-document.body.onclick = (e) => {
-  if (e.target.tagName === "I") return;
-  menu.classList.remove("menu-open");
-  // nav.style.height = `${nav.clientHeight - 140}px`;
-  menuOpen = false;
-};

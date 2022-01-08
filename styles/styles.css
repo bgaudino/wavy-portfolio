@@ -3,6 +3,7 @@
   --orange: #fd5a1e;
   --gold: #ae8f6f;
   --beige: #efd19f;
+  --divider: url(../images/svg/wave1.svg);
 }
 
 body {
@@ -18,6 +19,7 @@ h1 {
   font-weight: 700;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 h2 {
@@ -37,10 +39,10 @@ section {
 }
 
 .project-img {
-  width: 420px;
   max-width: 100%;
   height: auto;
   border-radius: 10px;
+  display:
 }
 
 .headshot {
@@ -202,7 +204,7 @@ hr {
 }
 
 .divider {
-  background: url("../images/wave1.svg") no-repeat center;
+  background: var(--divider) no-repeat center;
   background-size: cover;
   width: 100%;
   height: 300px;
@@ -220,6 +222,28 @@ hr {
   max-width: 1080px;
   margin: 0 auto;
 }
+
+/* .headshot {
+  animation: fade-in 4s ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+} */
 
 .nav-links {
   display: flex;
@@ -249,10 +273,9 @@ hr {
 }
 
 .project {
-  background: url("../images/wave1.svg") no-repeat cover !important;
   padding: 20px;
   border-radius: 10px;
-  background: var(--gold);
+  background: var(--black);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -261,7 +284,7 @@ hr {
 }
 
 .active-project {
-  background-color: var(--orange);
+  background: var(--gold);
 }
 
 .active-project hr {
@@ -274,7 +297,8 @@ hr {
 }
 
 .mobile-links {
-  background-color: var(--beige);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
   padding-right: 1rem;
   border-radius: 10px;
   position: fixed;
@@ -283,11 +307,12 @@ hr {
   transition: 1s;
   list-style: none;
   top: 32px;
+  line-height: 3rem;
   left: calc(100% - 8rem);
 }
 
 .mobile-links a {
-  color: var(--black);
+  color: #fff;
 }
 
 .tag {
@@ -319,14 +344,14 @@ hr {
   grid-gap: 2rem;
   align-items: center;
   text-align: right;
-  color: var(--black);
+  color: #fff;
 }
 
 .level {
   height: 1.5rem;
   width: 0;
   transition: 1s;
-  background-color: var(--beige);
+  background-color: var(--orange);
 }
 
 #skills {
@@ -340,6 +365,17 @@ hr {
   color: var(--gold);
 }
 
+#resume {
+  width: 100%;
+  max-width: 600px;
+  display: grid;
+  justify-content: flex-start;
+}
+
+
+#resume h3, h4, h5 {
+  margin: 0;
+}
 @media screen and (max-width: 1080px) {
   .logo {
     text-align: center;
