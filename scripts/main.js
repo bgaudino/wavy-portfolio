@@ -11,6 +11,7 @@ projects.forEach((project, index) => {
   const hr = document.createElement("hr");
   const description = document.createElement("p");
   const img = document.createElement("img");
+  img.classList.add("project-img");
   const imgLink = document.createElement("a");
   imgLink.href = project.link;
   imgLink.appendChild(img);
@@ -36,7 +37,7 @@ projects.forEach((project, index) => {
       tagDiv = document.createElement("img");
       tagDiv.classList.add("django");
       tagDiv.src = "./images/svelte.png";
-    } else if (["React", "js", "Python", "html5", "css3"].includes(tag)) {
+    } else if (["React", "js", "Python", "html5", "css3", "Bootstrap"].includes(tag)) {
       tagDiv = document.createElement("i");
       tagDiv.classList.add("tag");
       tagDiv.classList.add("fab", `fa-${tag.toLowerCase()}`);
@@ -94,14 +95,14 @@ anchors.forEach((anchor) => {
   });
 });
 
-// // Handle svg animation
-// const waves = KUTE.fromTo(
-//   "#wave1",
-//   { path: "#wave1" },
-//   { path: "#wave2" },
-//   { repeat: 999, duration: 5000, yoyo: true }
-// );
-// waves.start();
+// Handle svg animation
+const waves = KUTE.fromTo(
+  "#wave1",
+  { path: "#wave1" },
+  { path: "#wave2" },
+  { repeat: 999, duration: 5000, yoyo: true }
+);
+waves.start();
 
 // Handle link hover color
 const navLinks = document.querySelectorAll(".code-wrapper");

@@ -24,7 +24,7 @@ const projects = [
     image: "/images/mlb-stats.png",
     link: "https://mlb-player-comparison.netlify.app/",
     github: "https://www.github.com/bgaudino/mlb-player-comparison",
-    tags: ["React", "js"],
+    tags: ["React", "js", "css3"],
   },
   {
     name: "Half Empty",
@@ -42,7 +42,7 @@ const projects = [
     image: "/images/pomodoggo.png",
     link: "https://pomodoggo.netlify.app/",
     github: "https://www.github.com/bgaudino/pomodoggo",
-    tags: ["React", "js", "Boostrap"],
+    tags: ["React", "js", "Bootstrap"],
   },
   {
     name: "Trivia",
@@ -51,7 +51,7 @@ const projects = [
     image: "/images/trivia.png",
     link: "https://trivial-unpursuit.netlify.app/",
     github: "https://www.github.com/bgaudino/trivia",
-    tags: ["Svelte", "js"],
+    tags: ["Svelte", "js", "html5", "css3"],
   },
   {
     name: "Word Scrambler",
@@ -68,6 +68,6 @@ const projects = [
     image: "/images/drummer.png",
     link: "https://react-drummer.netlify.app/",
     github: "https://www.github.com/bgaudino/drum-machine",
-    tags: ["React", "js"],
+    tags: ["React", "js", "css3"],
   },
 ];
