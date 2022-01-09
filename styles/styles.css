@@ -259,7 +259,7 @@ hr {
   justify-content: space-between;
   align-items: baseline;
   padding: 0 20px;
-  transition: background 300ms;
+  transition: 300ms;
   transition: height 1s;
   animation: drop-in 1s ease-in-out;
   animation-fill-mode: forwards;
