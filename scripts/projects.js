@@ -11,9 +11,9 @@ const projects = [
     tags: ["Django", "Python", "React", "js", "Material-UI", "Vexflow"],
   },
   {
-    name: "Exercise Tracker",
+    name: "Workout Tracker",
     description:
-      "Track you weightlifting sessions and keep track of your progress. Link your strava account to have cardio sessions automatically added to your workout log and view a map of your routes.",
+      "Track your weightlifting sessions and keep track of your progress. Link your strava account to have cardio sessions automatically added to your workout log and view a map of your routes.",
     image: imagePath + "workout.jpg",
     link: "https://brian-works-out.netlify.app/",
     github: "https://www.github.com/bgaudino/workouts",
@@ -22,7 +22,7 @@ const projects = [
   {
     name: "Baseball Stats",
     description:
-      "Compare the stats of two different players and see how they compare. This application uses the MLB API to get the stats of the players you choose.",
+      "Compare the stats of two different active or historical baseball players. This application uses the MLB API to get the stats of the players you choose.",
     image: imagePath + "mlb-stats.jpg",
     link: "https://mlb-player-comparison.netlify.app/",
     github: "https://www.github.com/bgaudino/mlb-player-comparison",
@@ -58,7 +58,7 @@ const projects = [
   {
     name: "Word Scrambler",
     description:
-      "A word scrambler game using vanilla JavaScript. This application uses the Word Scrambler API to get random words.",
+      "A word scrambler game using vanilla JavaScript.",
     image: imagePath + "scrambler.jpg",
     link: "https://scrambleon.netlify.app/",
     github: "https://www.github.com/bgaudino/scrambler",
