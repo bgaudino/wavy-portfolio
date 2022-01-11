@@ -48,6 +48,7 @@ projects.forEach((project, index) => {
     }
   });
   title.innerText = project.name;
+  title.style.cursor = "pointer";
   img.src = project.image;
   description.innerText = project.description;
   a.href = project.link;
@@ -64,6 +65,10 @@ projects.forEach((project, index) => {
   div.appendChild(description);
   div.appendChild(tags);
   div.appendChild(links);
+  title.onclick = () => {
+    const link = div.querySelector("a");
+    link.click();
+  }
   container.appendChild(div);
   // if (index % 2 !== 0) {
   //   const wave = document.createElement("div");
