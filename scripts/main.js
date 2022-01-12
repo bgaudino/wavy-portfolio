@@ -21,11 +21,18 @@ projects.forEach((project, index) => {
   const a = document.createElement("a");
   const browserIcon = document.createElement("i");
   browserIcon.classList.add("fab", "fa-chrome");
-  const github = document.createElement("a");
-  const githubIcon = document.createElement("i");
-  githubIcon.classList.add("fab", "fa-github");
   links.appendChild(a);
-  links.appendChild(github);
+
+  Object.keys(project.github).forEach((key) => {
+    const github = document.createElement("a");
+    const githubIcon = document.createElement("i");
+    githubIcon.classList.add("fab", "fa-github");
+    github.href = project.github[key];
+    github.target = "_blank";
+    github.innerText = key === "code" ? "Source Code" : key;
+    github.appendChild(githubIcon);
+    links.appendChild(github);
+  });
   const tags = document.createElement("div");
   tags.classList.add("tags");
   project.tags.forEach((tag) => {
@@ -38,7 +45,9 @@ projects.forEach((project, index) => {
       tagDiv = document.createElement("img");
       tagDiv.classList.add("django");
       tagDiv.src = "./images/icons/svelte.png";
-    } else if (["React", "js", "Python", "html5", "css3", "Bootstrap"].includes(tag)) {
+    } else if (
+      ["React", "js", "Python", "html5", "css3", "Bootstrap"].includes(tag)
+    ) {
       tagDiv = document.createElement("i");
       tagDiv.classList.add("tag");
       tagDiv.classList.add("fab", `fa-${tag.toLowerCase()}`);
@@ -55,10 +64,6 @@ projects.forEach((project, index) => {
   a.target = "_blank";
   a.innerText = "View Project";
   a.appendChild(browserIcon);
-  github.href = project.github;
-  github.target = "_blank";
-  github.innerText = "Source Code";
-  github.appendChild(githubIcon);
   div.appendChild(title);
   div.appendChild(hr);
   div.appendChild(imgLink);
@@ -68,14 +73,8 @@ projects.forEach((project, index) => {
   title.onclick = () => {
     const link = div.querySelector("a");
     link.click();
-  }
+  };
   container.appendChild(div);
-  // if (index % 2 !== 0) {
-  //   const wave = document.createElement("div");
-  //   wave.classList.add("divider");
-  //   wave.style.gridColumn = "span 2";
-  //   container.appendChild(wave);
-  // }
 });
 
 const projectsSection = document.querySelector("#project-section");
@@ -101,7 +100,6 @@ anchors.forEach((anchor) => {
   });
 });
 
-
 // Handle card hover animation
 const cards = Array.from(document.querySelectorAll(".project"));
 
@@ -113,5 +111,3 @@ cards.forEach((card) => {
     card.classList.remove("active-project");
   };
 });
-
-
