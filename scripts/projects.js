@@ -23,6 +23,18 @@ const projects = [
     tags: ["Django", "Python", "React", "js", "Bulma", "Strava"],
   },
   {
+    name: "Potlucky",
+    description:
+      "A web application that allows you to schedule a potluck, invite your friends, and coordinate the dishes.",
+    image: imagePath + "potlucky.png",
+    link: "https://potlucky.netlify.app/",
+    github: {
+      backend: "https://github.com/bgaudino/potlucky-backend",
+      frontend: "https://www.github.com/bgaudino/potlucky-frontend",
+    },
+    tags: ["node-js", "js", "React", "MonogoDB", "Express", "Material-UI"],
+  },
+  {
     name: "Baseball Stats",
     description:
       "Compare the stats of two different active or historical baseball players. This application uses the MLB API to get the stats of the players you choose.",

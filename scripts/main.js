@@ -51,6 +51,10 @@ projects.forEach((project, index) => {
       tagDiv = document.createElement("i");
       tagDiv.classList.add("tag");
       tagDiv.classList.add("fab", `fa-${tag.toLowerCase()}`);
+    } else if (tag === "node-js") {
+      tagDiv = document.createElement("i");
+      tagDiv.classList.add("tag");
+      tagDiv.classList.add("fab", "fa-node-js");
     }
     if (tagDiv) {
       tags.appendChild(tagDiv);
