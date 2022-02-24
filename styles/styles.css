@@ -353,9 +353,9 @@ hr {
   padding-right: 1rem;
   border-radius: 10px;
   position: fixed;
-  opacity: 0;
+  transform: translateX(120%);
   text-align: right;
-  transition: 1s;
+  transition: 0.5s;
   list-style: none;
   top: 32px;
   line-height: 3rem;
@@ -447,7 +447,7 @@ h5 {
     display: inline-block !important;
   }
   .menu-open {
-    opacity: 1;
+    transform: translateX(0);
   }
   .project-section {
     grid-template-columns: 1fr;
