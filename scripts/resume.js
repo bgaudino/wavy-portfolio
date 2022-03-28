@@ -9,7 +9,7 @@ const resume = {
     phone: "(330) 554-6643",
     url: "https://briangaudino.dev",
     summary:
-      "I'm a Full Stack Web Developer based in Chicago. As a self-taught programmer with a background in music, I bring a muli-disciplinary mindset to my work. I specialize in Django and React but I'm I am always excited to learn new technologies. I'm currently working as a Web Developer at The Paperless Agent.",
+      "I'm a Full Stack Web Developer based in Chicago. As a self-taught programmer with a background in music, I bring a muli-disciplinary mindset to my work. I specialize in Django and React but I'm I am always excited to learn new technologies. I'm currently working as a Software Engineer at Fusionbox.",
     location: {
       address: "5825 S Dorchester Ave",
       postalCode: "IL 60637",
@@ -29,12 +29,21 @@ const resume = {
   },
   work: [
     {
+      name: "Fusionbox",
+      location: "Denver, CO",
+      position: "Software Engineer",
+      url: "https://fusionbox.com",
+      startDate: "2022-04-01",
+      highlights: [],
+    },
+    {
       name: "The Paperless Agent",
       location: "Austin, TX",
       description: "Awesome compression company",
       position: "Software Developer",
       url: "https://thepaperlessagent.com",
       startDate: "2021-07-01",
+      endDate: "2022-04-01",
       highlights: [
         "Collaborate with dev team to determine the scope and expectations of the phases of our marketing suite roll out.",
         "Produce clean, efficient code, based on team standards.",
