@@ -138,6 +138,10 @@ hr {
   height: 300px;
 }
 
+.resume-section {
+  margin-bottom: 4rem;
+}
+
 .flip {
   transform: rotateX(180deg);
 }
@@ -299,6 +303,11 @@ hr {
   height: 2px;
   width: 100%;
   background: #fff;
+}
+
+.spaced-header {
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
 
 .header-scroll {

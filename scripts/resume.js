@@ -205,14 +205,18 @@ function formatDate(date) {
 const resumeContainer = document.getElementById("resume-container");
 
 const work = document.createElement("div");
+work.classList.add("resume-section");
 const workHeader = document.createElement("h2");
+workHeader.classList.add("spaced-header");
 workHeader.innerText = "Work";
 work.appendChild(workHeader);
 resumeContainer.appendChild(work);
 
 const education = document.createElement("div");
+education.classList.add("resume-section");
 const educationHeader = document.createElement("h2");
 educationHeader.innerText = "Education";
+educationHeader.classList.add("spaced-header");
 education.appendChild(educationHeader);
 resumeContainer.appendChild(education);
 
