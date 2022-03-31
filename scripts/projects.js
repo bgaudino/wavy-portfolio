@@ -35,6 +35,16 @@ const projects = [
     tags: ["node-js", "js", "React", "MonogoDB", "Express", "Material-UI"],
   },
   {
+    "name": "Option Paralysis",
+    "description": "A web application that allows you to compare the pros and cons of different options and make a decision.",
+    "image": imagePath + "option-paralysis.png",
+    "link": "https://option-paralysis.xyz/",
+    "github": {
+      code: "https://www.github.com/bgaudino/procon",
+    },
+    "tags": ["Django", "Python"],
+  },
+  {
     name: "Baseball Stats",
     description:
       "Compare the stats of two different active or historical baseball players. This application uses the MLB API to get the stats of the players you choose.",
