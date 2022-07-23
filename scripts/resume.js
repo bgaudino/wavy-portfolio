@@ -9,7 +9,7 @@ const resume = {
     phone: '(330) 554-6643',
     url: 'https://briangaudino.dev',
     summary:
-      "I'm a Full Stack Web Developer based in Chicago. As a self-taught programmer with a background in music, I bring a muli-disciplinary mindset to my work. I specialize in Django and React but I'm I am always excited to learn new technologies. I'm currently working as a Software Engineer at Fusionbox.",
+      "I'm a Full Stack Web Developer based in Chicago. As a self-taught programmer with a background in music, I bring a multi-disciplinary mindset to my work. I specialize in Django and React but I'm I am always excited to learn new technologies. I'm currently working as a Software Engineer at Fusionbox.",
     location: {
       address: '5825 S Dorchester Ave',
       postalCode: 'IL 60637',
